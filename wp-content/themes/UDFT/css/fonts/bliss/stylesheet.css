@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Bliss';
+    src: url('Bliss-Normal.eot');
+    src: url('Bliss-Normal.eot?#iefix') format('embedded-opentype'),
+        url('Bliss-Normal.woff2') format('woff2'),
+        url('Bliss-Normal.woff') format('woff'),
+        url('Bliss-Normal.ttf') format('truetype'),
+        url('Bliss-Normal.svg#Bliss-Normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BLISS';
+    src: url('BLISS-Normal.eot');
+    src: url('BLISS-Normal.eot?#iefix') format('embedded-opentype'),
+        url('BLISS-Normal.woff2') format('woff2'),
+        url('BLISS-Normal.woff') format('woff'),
+        url('BLISS-Normal.ttf') format('truetype'),
+        url('BLISS-Normal.svg#BLISS-Normal') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bliss Pro';
+    src: url('BlissPro-ExtraLight.eot');
+    src: url('BlissPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('BlissPro-ExtraLight.woff2') format('woff2'),
+        url('BlissPro-ExtraLight.woff') format('woff'),
+        url('BlissPro-ExtraLight.ttf') format('truetype'),
+        url('BlissPro-ExtraLight.svg#BlissPro-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bliss Pro';
+    src: url('BlissPro-Medium.eot');
+    src: url('BlissPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('BlissPro-Medium.woff2') format('woff2'),
+        url('BlissPro-Medium.woff') format('woff'),
+        url('BlissPro-Medium.ttf') format('truetype'),
+        url('BlissPro-Medium.svg#BlissPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bliss Pro';
+    src: url('BlissPro-Bold.eot');
+    src: url('BlissPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BlissPro-Bold.woff2') format('woff2'),
+        url('BlissPro-Bold.woff') format('woff'),
+        url('BlissPro-Bold.ttf') format('truetype'),
+        url('BlissPro-Bold.svg#BlissPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
