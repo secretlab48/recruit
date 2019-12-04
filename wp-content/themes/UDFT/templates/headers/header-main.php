@@ -31,7 +31,7 @@ if ( is_user_logged_in() ) {
             </div>
         </div>
     </div>
-    <div class="logo-container">
+    <div class="logo-container front-page">
         <div class="logo-box container">
             <div class="row">
                 <div class="logo"><a href="<?php echo site_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg"></a></div>
@@ -40,9 +40,9 @@ if ( is_user_logged_in() ) {
                         <?php echo recruit_get_hot_offer(); ?>
                     </div>
                 </div>
-                <div class="button-box">
+                <!--<div class="button-box">
                     <a class="response-button applicant-acoount<?php echo $a_class; ?>" href="<?php echo site_url(); ?>/applicant-account/?selected-vacancies">send resume</a>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -63,19 +63,19 @@ if ( is_user_logged_in() ) {
             <div class="top-content-text">
                 <div class="top-first-caption">IT Job&Karriere</div>
                 <div class="top-second-caption">
-                    <span>you choose </span><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/flag-de.jpg"><span>we help</span>
+                    <span>you choose </span><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/flag-de.jpg"><span> we help</span>
                 </div>
             </div>
             <div class="top-content-pictures">
-                <div class="top-picture-box">
+                <div class="top-picture-box left">
                     <div class="tpp-box"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/tp1.jpg"></div>
                     <div class="tp-title">I'm looking for work</div>
-                    <a class="response-button applicant-account log-in-here" href="<?php echo site_url(); ?>/applicant-account/?selected-vacancies">send resume</a>
+                    <a class="response-button applicant-account <?php echo $a_class; ?>" href="<?php echo site_url(); ?>/applicant-account/?selected-vacancies">send resume</a>
                 </div>
-                <div class="top-picture-box">
+                <div class="top-picture-box right">
                     <div class="tpp-box"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/tp2.jpg"></div>
                     <div class="tp-title">I'm a Business needing help</div>
-                    <a class="response-button contact-us" href="<?php echo site_url(); ?>/contact">send resume</a>
+                    <a class="response-button contact-us" href="<?php echo site_url(); ?>/contact">contact us</a>
                 </div>
             </div>
         </div>

@@ -14,16 +14,15 @@ get_header();
             <div class="s1-left col col-md-6 col-sm-12">
                 <h2><?php echo _x( 'About us', 'recruit', 'home' );?></h2>
                 <div class="s-text">
-                    <p><?php echo _x( 'Начиная с 2011 года сервисная компания “Wistra Job&Karriere” помогла трудоустроится более чем 6570 кандидатам.', 'recruit', 'home' );?></p>
-                    <p><?php echo _x( 'Мы как никто другой знаем, как тяжело найти легальную и высокооплачиваемую работу за рубежом.', 'recruit', 'home' );?></p>
-                    <p><?php echo _x( 'За 9 лет мы прошли все этапы от поиска нужной вам вакансии, до трудоустройства и получения первой зарплаты.', 'recruit', 'home' );?></p>
-                    <p><?php echo _x( 'Также, мы отобрали для вас только самых проверенных, надежных и лояльных работодателей и кадровые агентства.', 'recruit', 'home' );?></p>\
-                    <p><?php echo _x( 'Наша цель - помочь найти работу каждому, кто этого желает. И не важно вы опытный специалист или новичек', 'recruit', 'home' );?></p>
+                    <p><?php echo _x( 'Since 2011, the company Wistra Job&Karriee has helped to find work in the best EU IT projects for 2285 job seekers. We bring together the best minds around the world in order you give the life to really cool ideas and change the planet for the better with the help of code.', 'recruit', 'home' );?></p>
+                    <p><?php echo _x( 'We help not only with careers, but also with official employment and the right to work in Germany. Our experience in this field guarantees you a Blue Card and other necessary documents for legal residence in the EU.', 'home' );?></p>
+                    <p class="blued"><?php echo _x( 'From you - your knowledge and abilities.', 'recruit', 'home' );?></p>
+                    <p class="blued"><?php echo _x( 'from us - concern for your better future!', 'recruit', 'home' );?></p>
                 </div>
             </div>
             <div class="s1-right col col-md-6 col-sm-12">
-                <div class="s1-bg"></div>
-                <!--<div class="s1-img"></div>-->
+                <!--<div class="s1-bg"></div>-->
+                <div class="s1-img"></div>
             </div>
         </div>
     </div>
@@ -54,13 +53,17 @@ get_header();
 </section>
 
 
-<?php echo get_site_banner(); ?>
+<?php
+   echo '<div class="tb-box"><div class="tb-bg"><div class="container">';
+   echo get_texted_banner( array( 'text' => 'The Right Job Opportunity For Your IT-Career Every Single One Of Our Jobs Has Some Kind Of Flexibility Option -  Such As Telecommuting, A Part-Time', 'link' => '#' ) );
+   echo '</div></div></div>'
+?>
 
 
 
 <section class="home-section s2-box">
     <div class="section-header">
-        <h2 class="blog-heading"><?php echo _x( 'blogs&news', 'recruit', 'home' );?></h2class>
+        <h2 class="blog-heading"><?php echo _x( 'blogs&news', 'recruit', 'home' );?></h2>
     </div>
     <div class="container p0">
         <div class="posts-carousel row">
@@ -108,9 +111,9 @@ get_header();
             $reviews = get_posts( array( 'post_type' => 'review', 'numberposts' => -1 ) );
             $out = '<div class="reviews-container"><div class="reviews-box">';
             foreach( $reviews as $review ) {
-                $img = get_the_post_thumbnail_url( $review->ID, array( 150, 150 ) );
-                $c = get_post_field('post_content', $review->ID);
-                $content = '<div class="review-content"><div class="rc-info">' . $c . '</div></div>';
+                $img = get_the_post_thumbnail_url( $review->ID, 'review-archive' );
+                $c = apply_filters('the_content', get_post_field('post_content', $review->ID ) );
+                $content = '<div class="review-content"><div class="rc-info"><div class="rc-title">' . get_the_title( $review ) . '</div>' . $c . '</div></div>';
                 $out .= '<div class="archive-review"><div class="img-box"><img src="' . $img . '"></div>' . $content . '</div>';
             }
             $out .= '</div></div>';

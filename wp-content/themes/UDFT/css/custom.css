@@ -167,9 +167,19 @@ input.lrm-input:not(:first-child){margin-top: 10px; }
 .modal-login_exit:hover{transform: rotate(180deg);}
 
 .top-img-box { background-image : url(../img/back-top.jpg); background-size : cover; background-position : 50%, 50%; }
-.top-content-box { padding : 0; }
-.top-content-text { text-align : center; padding : 100px 0; }
-.top-first-caption { font-family: "Bliss Pro - Heavy"; font-size: 50px; text-transform: uppercase; letter-spacing: -0.18px; color : #fff; }
+.top-content-box { position : relative; padding : 0; }
+.top-content-text { text-align : center; padding : 131px 0; }
+.top-first-caption { font-family: "Bliss Pro Heavy"; font-size: 50px; text-transform: uppercase; letter-spacing: -0.18px; color : #fff; text-shadow: #000 0 0 2px; }
+.top-second-caption { }
+.top-second-caption span { display : inline-block; font-family: "Bliss Pro Heavy"; vertical-align : top; font-size: 26px; text-transform: uppercase; letter-spacing: -0.26px; }
+.top-second-caption img { display : inline-block; margin : 3px 7px 0 7px; }
+.top-content-pictures { position : absolute; top : 0; left : 0; width : 100%; height : 100%; }
+.top-picture-box { position : absolute; top : 50%; transform : translateY(-50%); width : 290px; border-radius: 10px; overflow: hidden; background-color : #fff; text-align : center; }
+.top-picture-box.left { left : 0; }
+.top-picture-box.right { right : 0; }
+.top-picture-box .tpp-box { position : relative; }
+.top-picture-box .tp-title { text-align : center; color: #121212; letter-spacing: -0.18px; margin : 10px 0; }
+.top-picture-box .response-button { display: inline-block; margin : 0 0 10px 0; }
 .main-title-box { padding : 15px 0; background-color: #203978; }
 .main-title { /*display : flex;*/ justify-content : space-between; align-items : center; text-align : right; }
 .main-title-caption { display : flex; justify-content : flex-start; align-items : center; text-align : left; }
@@ -191,6 +201,20 @@ input.lrm-input:not(:first-child){margin-top: 10px; }
 .banner-bottomed { margin-bottom : 100px; }
 .banner-link { }
 .banner-link img { width : 100%; }
+
+.tb-box { background-image : url(../img/tb-bg1.jpg); padding : 20px 0; background-size: cover; background-position: 0; }
+.tb-bg { background-image : url(../img/tb-bg2.jpg); padding : 25px 0; background-size: cover; background-position: 0; }
+.tb-content { display : flex; align-items : center; }
+.tb-text { flex : 0 0 60%; display : flex; justify-content : center; align-items : center; color : #fff; font-size: 24px; letter-spacing: -0.24px; }
+.tba-box { flex : 0 0 40%; display : flex; justify-content : center; align-items : center; }
+a.btn-2 { position : relative; display: flex; justify-content : center; align-items: center; padding : 10px 0; z-index : 1; }
+a.btn-2:before { content : ''; position : absolute; left : -40%; top : 0; width : 180%; height : 100%; background-color : #221199; box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.25); transform: skew(-30deg, 0); z-index : -1; }
+a.btn-2 span { display : inline-block; }
+a.btn-2 span.tba-text { font-family: "Bliss Heavy"; font-size: 24px; letter-spacing: -0.24px; color : #fff; }
+a.btn-2 span.tba-plus { margin : 0 0 0 10px; position : relative; width : 23px; height : 23px; border : 2px yellow solid; border-radius : 50%; }
+a.btn-2 span.tba-plus:before, a.btn-2 span.tba-plus:after { content : ''; position : absolute; top : 9px; left : 9px; transform : translate(-50%,-50%); width : 15px; height : 3px; background-color : yellow; }
+a.btn-2 span.tba-plus:after { left : 2px; transform : translateY(-50%) rotate(90deg); }
+
 
 
 .page-home .posts-carousel { }
@@ -257,6 +281,7 @@ input.lrm-input:not(:first-child){margin-top: 10px; }
 .logo-container .logo { flex : 0 0 225px; max-width : 225px; }
 .logo-container .logo a { display : block; margin : 15px 0; }
 .logo-container .hot-offers-box { flex : 0 0 calc(100% - 390px); max-width : calc(100% - 390px); display : flex; align-items : center; justify-content: center; }
+.logo-container.front-page .hot-offers-box { flex : 0 0 calc(100% - 225px); max-width : calc(100% - 225px); justify-content: flex-end; }
 .logo-container .button-box { flex : 0 0 165px; max-width : 165px; align-self: center; }
 .logo-container .button-box .response-button { display : flex; font-family : Bliss Pro Heavy; height : 52px; margin : 0; }
 .top-menu-container { box-shadow: 0 3px 16px 2px rgba(0, 0, 0, 0.18); }
@@ -320,9 +345,10 @@ input.lrm-input:not(:first-child){margin-top: 10px; }
 .s1-left { }
 .s1-left h2 { font-family : Bliss Pro; color: #003399; font-size : 2rem; letter-spacing: -0.36px; }
 .s1-left p { margin : 0 0 10px 0;color : #000; letter-spacing: -0.16px; }
-.s1-right { position : relative; padding : 15px; }
+.s1-left p.blued { color: #203978; text-transform: uppercase; font-family : Bliss Pro Bold; }
+.s1-right { position : relative; padding : 0; box-shadow : 10px 10px 20px 0 rgba(0,0,0,0.15); }
 .s1-right .s1-bg { position : absolute; top : 0; left : 0; width : 1000px; height : 100%; background-color : rgba( 0, 0, 0, 0.1 ); background-image : url( ../img/pic_about.jpg ); background-size: 100% auto; }
-.s1-right .s1-img { position : absolute; top : 15px; left : 15px; height : calc(100% - 30px); width : calc(100% - 30px); background-image : url(../img/people.jpg); background-size : cover; }
+.s1-right .s1-img { position : absolute; top : 15px; left : 15px; height : calc(100% - 30px); width : calc(100% - 30px); background-image : url(../img/pic_about2.jpg); background-size : cover; }
 .s1-right img {  }
 
 
@@ -351,11 +377,11 @@ s3.row { justify-content : space-between; }
 
 
 
-.reviews-carousel { background-image : url( ../img/reviews-bg.jpg ); background-size : cover; }
+.reviews-carousel { background-image : url( ../img/reviews1-bg.jpg ); background-size : cover; }
 .reviews-box { width : 90%; margin : 40px auto 0 auto; }
-.archive-review { display : flex !important; background-color: #fff; padding: 15px; border-radius: 15px; /*width : 20%; border : 2px solid transparent; padding : 5px;*/ transition : all 0.4s; }
-.archive-review .img-box { display : flex; justify-content : center; align-items : center; flex : 0 0 30%;  }
-.archive-review .img-box img { display : block; width : 120px; height : 120px; border-radius : 50%; }
+.archive-review { display : flex !important; flex-direction : row-reverse;background-color: #fff; border-radius: 10px; /*width : 20%; border : 2px solid transparent; padding : 5px;*/ transition : all 0.4s; }
+.archive-review .img-box { flex : 0 0 215px;  }
+.archive-review .img-box img { display : block; width : 100%; height : 315px; border-radius: 10px; }
 .slick-current .archive-review { /*border-color : #c7c7c7;*/ }
 .reviews-container { }
 .reviews-box .slick-slide { z-index: 0; }
@@ -373,11 +399,15 @@ s3.row { justify-content : space-between; }
 .reviews-box .slick-dots li button::before { font-size : 10px; }
 .reviews-box .slick-dots li.slick-active button::before { color :  #FF7F50; }
 .review-contents { }
-.review-content { flex : 0 0 70%; text-align : center; }
-.review-content .rc-text { font-size : 1.1rem; margin : 0 0 20px 0; }
-.review-content .rc-info { min-height: 38px; }
-.review-content .rc-info p { margin : 0; text-align : left; }
-.review-content .rc-info p:first-child { margin-bottom : 20px; }
+.review-content { display : flex; flex : 0 0 calc(100% - 215px); text-align : left; }
+.review-content .rc-text { font-size : 1.1rem; }
+.review-content .rc-info { margin : 15px 0 15px 15px; background-color: #e1ebef; padding: 10px 5px 10px 10px; border-radius : 10px 0 0 10px; }
+.review-content .rc-info .rc-title { position : relative; font-size: 20px; color: #003399; letter-spacing: -0.2px; }
+.review-content .rc-info .rc-title:before { position : absolute; left : -25px; width : 20px; height : 27px; font-family : FontAwesome; content : '\f10d'; color: #003399; background-color: #e1ebef; font-size : 16px; padding-top: 3px; }
+.review-content .rc-info p { }
+.review-content .rc-info ul { list-style: circle outside; padding : 0 0 0 20px; }
+.review-content .rc-info ul li { list-style: disc outside; }
+
 
 
 

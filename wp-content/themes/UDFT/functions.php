@@ -31,7 +31,7 @@ add_action( 'admin_init', function() {
 
 });
 
-remove_filter('the_content', 'wpautop');
+//remove_filter('the_content', 'wpautop');
 
 class UDFT
 {
@@ -51,6 +51,7 @@ class UDFT
             add_image_size('resume-archive', 90, 100, true);
             add_image_size('resume-single', 260, 285, true);
             add_image_size('employer-thumb', 140, 54, true);
+            add_image_size('review-archive', 215, 315, true);
 
             load_theme_textdomain('recruit', get_template_directory() . '/languages');
         }
@@ -520,6 +521,19 @@ function get_site_banner( $img = 'ban_adv_01.png', $target = null ) {
         '<section class="banner-section">
             <div class="container p0"><a class="banner-link" href="' . $target . '"><img src="' . get_stylesheet_directory_uri() . '/img/' . $img . '"></a></div>
         </section>';
+
+    return $out;
+
+}
+
+
+function get_texted_banner( $args ) {
+
+    $out =
+        '<div class="tb-content">
+            <div class="tb-text">' . $args['text'] . '</div>
+            <div class="tba-box"><a class="btn-2" href="' . $args['link'] . '"><span class="tba-text">' . __( 'Join Us', 'recruit' ) . '</span><span class="tba-plus"></span></a></div>
+        </div>';
 
     return $out;
 
